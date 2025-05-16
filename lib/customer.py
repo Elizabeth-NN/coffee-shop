@@ -9,7 +9,7 @@ class Customer:
     
     @property
     def name(self):
-        return self._name  # Note: using _name to avoid recursion
+        return self._name  # using _name to avoid recursion
 
     @name.setter
     def name(self, new_name):
@@ -20,10 +20,10 @@ class Customer:
         self._name = new_name
     
     def orders(self):
-        return self._orders.copy()  # Return copy to prevent external modification
+        return self._orders.copy()  # return a copy to prevent external modification
 
     def coffees(self):
-        # Return unique coffees using set comprehension
+        # return unique coffees using set comprehension
         return list({order.coffee for order in self._orders})
 
     def create_order(self, coffee, price):

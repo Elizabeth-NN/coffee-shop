@@ -3,9 +3,9 @@ class Order:
     all_orders = []
     
     def __init__(self, customer, coffee, price):
-        self.customer = customer  # Uses the setter
-        self.coffee = coffee      # Uses the setter
-        self.price = price        # Uses the setter
+        self.customer = customer 
+        self.coffee = coffee      
+        self.price = price       
         Order.all_orders.append(self)
         
         # Add to customer and coffee order lists
