@@ -48,3 +48,6 @@ class Order:
         if not isinstance(new_customer, Customer):
             raise ValueError("customer must be an instance of Customer Class")
         self._customer = new_customer
+
+    def __repr__(self):
+        return f"<Order: {self.customer.name} ordered {self.coffee.name} for ${self.price}>"

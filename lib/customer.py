@@ -49,3 +49,6 @@ class Customer:
                 customer_spending[order.customer] = order.price
         
         return max(customer_spending.items(), key=lambda item: item[1])[0]
+
+    def __repr__(self):
+        return f"<Customer: {self.name}>"

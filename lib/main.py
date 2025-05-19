@@ -5,6 +5,7 @@ from order import Order
 
 try:
     # valid orders
+
     brian = Customer("Brian")
     blackcoffee = Coffee("Black coffee")
     order1 = Order(brian, blackcoffee, 7.0)
@@ -35,7 +36,22 @@ try:
     print("**********All Orders***********")
     for order in Order.all_orders:
      print(f"Name:{order.customer.name}| {order.coffee.name} | Price:{order.price}")
-    
+
+
+
+    espresso = Coffee("Espresso")
+    mary = Customer("mary")
+
+    # mary orders an espresso
+    order1 = mary.create_order(espresso, 4.50)
+
+    # Check associations
+    print(espresso.orders())     # [order1]
+    print(espresso.customers())  # [mary]
+    print(mary.orders())        # [order1]
+    print(mary.coffees())       # [espresso]
+    print(order1.customer)       # mary
+    print(order1.coffee)         # espresso
     # Try invalid order
     # bad_order = Order("not a customer", coffee, 5.0)  # Raises ValueError
 except ValueError as e:

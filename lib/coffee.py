@@ -35,3 +35,5 @@ class Coffee:
             return 0
         total = sum(order.price for order in self._orders)
         return total / len(self._orders)
+    def __repr__(self):
+        return f"<Coffee: {self.name}>"
