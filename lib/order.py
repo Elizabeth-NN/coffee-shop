@@ -32,7 +32,7 @@ class Order:
 
     @coffee.setter
     def coffee(self, new_coffee):
-        from coffee import Coffee  # Import here to avoid circular imports
+        from coffee import Coffee  # Importing here to avoid circular imports
         if not isinstance(new_coffee, Coffee):
             raise ValueError("coffee must be an instance of Coffee Class")
         self._coffee = new_coffee
@@ -44,7 +44,7 @@ class Order:
 
     @customer.setter
     def customer(self, new_customer):
-        from customer import Customer  # Import here to avoid circular imports
+        from customer import Customer  # Importing here to avoid circular imports
         if not isinstance(new_customer, Customer):
             raise ValueError("customer must be an instance of Customer Class")
         self._customer = new_customer
